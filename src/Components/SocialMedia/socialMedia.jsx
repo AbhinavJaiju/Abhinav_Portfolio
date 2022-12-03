@@ -1,21 +1,22 @@
 import React from 'react'
-import { BsTwitter, BsInstagram} from 'react-icons/bs';
-import { FaFacebookF } from 'react-icons/fa';
-
-const socialMedia = () => {
+import { BsTwitter, BsInstagram,BsLinkedin, BsWhatsapp} from 'react-icons/bs';
+const SocialMedia = () => {
   return (
     <div className="app__social">
         <div>
-            <BsTwitter />
+            <BsTwitter onClick={() => window.open('https://twitter.com/AbhinavJaiju')}/>
         </div>
         <div>
-            <BsInstagram />
+            <BsInstagram onClick={() => window.open('https://www.instagram.com/dangerous_snowman/')}/>
         </div>
         <div>
-            <FaFacebookF />
+            <BsLinkedin onClick={() => window.open('https://www.linkedin.com/in/abhinav-jaiju-006/')}/>
+        </div>
+        <div>
+            <BsWhatsapp onClick={() => window.open("//api.whatsapp.com/send?phone=918589010166&text=Hi, Abhinav I'm trying to reach you from your portfolio website.")}/>
         </div>
     </div>
   )
 }
 
-export default socialMedia
+export default SocialMedia

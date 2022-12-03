@@ -99,12 +99,11 @@
   }
   
   .app__social {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    bottom: 2vh;
     flex-direction: column;
-  
-    padding: 1rem;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    position: fixed;
   
     div {
       width: 40px;
