@@ -37,6 +37,7 @@ import spotify from '../assets/spotify.png';
 import Abhinavlogo from '../assets/AbhinavLogo.png'
 import MyLogo from '../assets/MyLogo.png'
 import MyLogoComplete from '../assets/MyLogoComplete.png'
+import Abhinav_main from '../assets/Abhinav_main.png'
 
 export default {
   email,
@@ -74,5 +75,6 @@ export default {
   spotify,
   Abhinavlogo,
   MyLogo,
-  MyLogoComplete
+  MyLogoComplete,
+  Abhinav_main
 };
