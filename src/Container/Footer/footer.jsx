@@ -36,7 +36,7 @@ const Footer = () => {
       setIsFormSubmitted(true);
     });
     if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'Lead');
+      window.fbq('track', 'Lead',contact);
     }
   };
 
