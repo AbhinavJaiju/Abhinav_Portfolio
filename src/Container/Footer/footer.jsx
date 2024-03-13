@@ -35,6 +35,9 @@ const Footer = () => {
       setLoading(false);
       setIsFormSubmitted(true);
     });
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead');
+    }
   };
 
   return (
