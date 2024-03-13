@@ -38,6 +38,15 @@ const Footer = () => {
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('trackCustom', 'ContactingMe',contact);
     }
+
+    if (email.endsWith('gmail.com')) {
+      // Assuming you have a GTM event set up for this
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'emailEndsWithGmail',
+        'email': email
+      });
+    }
   };
 
   return (
@@ -86,7 +95,7 @@ const Footer = () => {
               onChange={handleChangeInput}
               ></textarea>
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" id="testing" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
         </div>
       ) : (
         <div>
