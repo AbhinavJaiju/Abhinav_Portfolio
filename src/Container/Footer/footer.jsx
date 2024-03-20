@@ -38,7 +38,12 @@ const Footer = () => {
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('trackCustom', 'ContactingMe',contact);
     }
-
+    window.instance('CNPA0LJC77UE2ERGD8RG').track('Contact',{
+      content_id:'contact1',
+      name:contact.name,
+      email:contact.email,
+      message:contact.message
+    });
     if (email.endsWith('gmail.com')) {
       // Assuming you have a GTM event set up for this
       window.dataLayer = window.dataLayer || [];
