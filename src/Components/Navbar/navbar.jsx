@@ -7,6 +7,18 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const handleClick = (item)=>{
+    setToggle(true);
+    console.log(item)
+    if(item === 'skills'){
+      window.ttq.track('ViewContent', {
+        content_id: {item},
+        content_type: 'product',
+        content_name: 'Product Detail',
+        quantity: 1
+     });
+    }
+  }
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -43,7 +55,7 @@ const Navbar = () => {
                   <a
                     href={`#${item}`}
                     onClick={() => {
-                      setToggle(true);
+                      handleClick(item);
                     }}
                   >
                     {item}
