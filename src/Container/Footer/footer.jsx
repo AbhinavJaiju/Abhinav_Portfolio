@@ -52,6 +52,18 @@ const Footer = () => {
         'email': email
       });
     }
+window.ttq.track('SubmitForm', {
+	"contents": [
+		{
+			"content_id": "1232", // string. ID of the product. Example: "1077218".
+			"content_type": contact.name, // string. Either product or product_group.
+			"content_name": contact.message,
+      "email":contact.email // string. The name of the page or product. Example: "shirt".
+		}
+	],
+	"value": 100, // number. Value of the order or items sold. Example: 100.
+	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
+});
   };
 
   return (
