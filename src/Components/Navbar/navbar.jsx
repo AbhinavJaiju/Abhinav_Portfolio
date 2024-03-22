@@ -11,7 +11,7 @@ const Navbar = () => {
     setToggle(true);
     console.log(item)
     if(item === 'skills'){
-      window.ttq.track('ViewContent', {
+      window.ttq.track('ViewContent','View', {
         content_id: {item},
         content_type: 'product',
         content_name: 'Product Detail',
