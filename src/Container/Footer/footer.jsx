@@ -52,19 +52,20 @@ const Footer = () => {
         'email': email
       });
     }
-window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', {
-	"contents": [
-		{
-			"content_id": "1232", // string. ID of the product. Example: "1077218".
-			"content_type": 'product', // string. Either product or product_group.
-			"content_name": contact.name,
-      "email":contact.email,
-      "message": contact.message // string. The name of the page or product. Example: "shirt".
-		}
-	],
-	"value": 100, // number. Value of the order or items sold. Example: 100.
-	"currency": "<content_currency>" // string. The 4217 currency code. Example: "USD".
-});
+    if (typeof window !== 'undefined' && window.ttq) {
+      window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', contact);
+    }
+    // window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', {
+    //   "contents": {
+    //      "content_id": "1232", // Example: "1077218"
+    //      "content_type": 'product', // Either 'product' or 'product_group'
+    //      "content_name": contact.name, // Dynamically populated
+    //      "email": contact.email, // Dynamically populated
+    //      "message": contact.message // Dynamically populated
+    //   },
+    //   "value": 100, // Example: 100
+    //   "currency": "USD" // Example: "USD"
+    //  });
   };
 
   return (
@@ -113,7 +114,7 @@ window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', {
               onChange={handleChangeInput}
               ></textarea>
           </div>
-          <button type="button" id="testing" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="submit" id="testing" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
         </div>
       ) : (
         <div>
