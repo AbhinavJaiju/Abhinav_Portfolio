@@ -114,7 +114,7 @@ const Footer = () => {
               onChange={handleChangeInput}
               ></textarea>
           </div>
-          <button type="submit" id="testing" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" id="testing" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
         </div>
       ) : (
         <div>
