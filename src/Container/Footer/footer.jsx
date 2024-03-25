@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./footer.scss";
 
 import { images } from "../../constants";
@@ -17,6 +17,11 @@ const Footer = () => {
 
   const { name, email, message } = formData;
   const TIKTOK_PIXEL_ID = "CNUJRQRC77U07IJKR950";
+
+
+  useEffect(() => {
+    tiktokPixelHandler.init(TIKTOK_PIXEL_ID);
+ }, []);
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
