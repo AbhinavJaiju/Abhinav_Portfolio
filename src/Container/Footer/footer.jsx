@@ -4,6 +4,7 @@ import "./footer.scss";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../Wrapper";
 import { client } from "../../client";
+import tiktokPixelHandler from "react-pixel-tiktok";
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const Footer = () => {
   const [loading, setLoading] = useState(false);
 
   const { name, email, message } = formData;
+  const TIKTOK_PIXEL_ID = "CNUJRQRC77U07IJKR950";
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -52,6 +54,17 @@ const Footer = () => {
         'email': email
       });
     }
+
+    tiktokPixelHandler.setTracking({
+      tracking: "SubmitForm",
+      data: {
+        content_id: "1232", // Example content ID
+        content_type: "product", // Example content type
+        content_name: contact.name, // Captured name
+        email: contact.email, // Captured email
+        message: contact.message, // Captured message
+      },
+    });
     // if (typeof window !== 'undefined' && window.ttq) {
     //   window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', contact);
     // }
