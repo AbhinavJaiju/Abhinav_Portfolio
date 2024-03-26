@@ -73,17 +73,16 @@ const Footer = () => {
     // if (typeof window !== 'undefined' && window.ttq) {
     //   window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', contact);
     // }
-    window.ttq.instance('CNUJRQRC77U07IJKR950').track('Contact', {
-      "contents": {
-         "content_id": "1232", // Example: "1077218"
-         "content_type": 'product', // Either 'product' or 'product_group'
-         "content_name": contact.name, // Dynamically populated
-         "email": contact.email, // Dynamically populated
-         "message": contact.message // Dynamically populated
-      },
-      "value": 100, // Example: 100
-      "currency": "USD" // Example: "USD"
-     });
+    
+    if(typeof window !== 'undefined' && window.ttq){
+      console.log('jello')
+      window.ttq('ViewContent',{
+        content_id:'12B12',
+        content_type: "product",
+        content_name:'Abhinav',
+        price:'123'
+      })
+    }
   };
 
   return (
