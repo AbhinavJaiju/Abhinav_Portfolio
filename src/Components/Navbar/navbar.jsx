@@ -15,7 +15,7 @@ const Navbar = () => {
       type: 'ViewContent',
       content_id: '123AB',
       content_type: 'product',
-      value: 'Hello',
+      value: item,
     });
 
   }
