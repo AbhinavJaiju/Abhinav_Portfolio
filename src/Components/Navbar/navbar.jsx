@@ -11,12 +11,26 @@ const Navbar = () => {
   const handleClick = (item)=>{
     setToggle(true);
     console.log(window.ttq)
-    window.ttq.push('viewContent',{
-      type: 'ViewContent',
-      content_id: '123AB',
-      content_type: 'product',
-      value: item,
-    });
+    window.ttq.track('ViewContent',{
+      contents:[
+        {
+          content_id:'301',
+          content_name:item,
+          brand:item,
+          quantity:1,
+          price:9
+        },
+        {
+          content_id:'3022',
+          content_name:item,
+          brand:item,
+          quantity:1,
+          price:9
+        }
+      ],
+      content_type:'product',
+      value:9.2
+    })
 
   }
   return (
