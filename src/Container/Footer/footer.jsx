@@ -59,18 +59,8 @@ const Footer = () => {
         'email': email
       });
     }
-    window.ttq.track('ViewContent',{
-      contents:[
-        {
-          content_id:'301',
-          name:contact.name,
-          email:contact.email,
-          message:contact.message,
-        }
-      ],
-      content_type:'product',
-      value:9.2,
-      currency:"USD",
+    window.ttq.track('Contact',{
+      contents:contact
     })
 
   };
