@@ -9,8 +9,8 @@ import { useState } from "react";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const handleClick = (item)=>{
-    setToggle(true);
     console.log(item)
+    setToggle(true);
     console.log(window.ttq)
     window.ttq.push({
       type: 'ViewContent',
@@ -29,7 +29,7 @@ const Navbar = () => {
         {["home", "about", "skills", "work","testimonials", "contact"].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <a href={`#${item}`} onClick={()=>handleClick(item)}>{item}</a>
           </li>
         ))}
       </ul>
