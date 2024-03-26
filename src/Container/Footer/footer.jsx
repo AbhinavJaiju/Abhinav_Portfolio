@@ -45,12 +45,12 @@ const Footer = () => {
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('trackCustom', 'ContactingMe',contact);
     }
-    window.instance('CNPA0LJC77UE2ERGD8RG').track('Contact',{
-      content_id:'contact1',
-      name:contact.name,
-      email:contact.email,
-      message:contact.message
-    });
+    // window.instance('CNPA0LJC77UE2ERGD8RG').track('Contact',{
+    //   content_id:'contact1',
+    //   name:contact.name,
+    //   email:contact.email,
+    //   message:contact.message
+    // });
     if (email.endsWith('gmail.com')) {
       // Assuming you have a GTM event set up for this
       window.dataLayer = window.dataLayer || [];
@@ -59,7 +59,7 @@ const Footer = () => {
         'email': email
       });
     }
-    window.ttq.track('Contact',{
+    window.ttq.track('ViewContent',{
       contents:[
         {
           content_id:'301',
@@ -67,7 +67,10 @@ const Footer = () => {
           email:contact.email,
           message:contact.message,
         }
-      ]
+      ],
+      content_type:'product',
+      value:9.2,
+      currency:"USD",
     })
 
   };
