@@ -29,7 +29,8 @@ const Navbar = () => {
         }
       ],
       content_type:'product',
-      value:9.2
+      value:9.2,
+      currency:"IND",
     })
 
   }
