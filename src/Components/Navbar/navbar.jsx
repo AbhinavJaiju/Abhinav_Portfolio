@@ -9,10 +9,9 @@ import { useState } from "react";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const handleClick = (item)=>{
-    console.log(item)
     setToggle(true);
     console.log(window.ttq)
-    window.ttq.push({
+    window.ttq.push('viewContent',{
       type: 'ViewContent',
       content_id: '123AB',
       content_type: 'product',
