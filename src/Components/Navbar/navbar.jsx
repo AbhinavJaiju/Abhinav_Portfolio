@@ -30,7 +30,7 @@ const Navbar = () => {
       ],
       content_type:'product',
       value:9.2,
-      currency:"IND",
+      currency:"USD",
     })
 
   }
