@@ -9,8 +9,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const handleClick = (item)=>{
     setToggle(true);
-    console.log(item)
-    if(typeof window !== 'undefined' && window.ttq){
+    console.log(window)
+    if(typeof window !== 'undefined'){
       console.log('jello')
       window.ttq('ViewContent',{
         content_id:'12B12',
@@ -19,6 +19,12 @@ const Navbar = () => {
         price:'123'
       })
     }
+    window.ttq('ViewContent',{
+      content_id:'12B12',
+      content_type: "product",
+      content_name:'Abhinav',
+      price:'123'
+    })
   }
   return (
     <nav className="app__navbar">
