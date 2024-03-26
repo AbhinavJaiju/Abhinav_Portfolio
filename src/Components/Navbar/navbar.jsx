@@ -4,7 +4,7 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import "./navbar.scss";
 import { useState } from "react";
-import TiktokPixel from 'tiktok-pixel';
+
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -12,7 +12,8 @@ const Navbar = () => {
     setToggle(true);
     console.log(item)
     console.log(window.ttq)
-    TiktokPixel.track('ViewContent', {
+    window.ttq.push({
+      type: 'ViewContent',
       content_id: '123AB',
       content_type: 'product',
       value: 'Hello',
