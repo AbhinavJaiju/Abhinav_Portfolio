@@ -16,6 +16,9 @@ const scaleVariants = {
   },
 };
 
+
+
+
 const Header = () => (
   <div id='home' className="app__header app__flex">
     <motion.div
