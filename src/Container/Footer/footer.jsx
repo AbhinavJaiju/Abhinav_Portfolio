@@ -59,30 +59,17 @@ const Footer = () => {
         'email': email
       });
     }
+    window.ttq.track('Contact',{
+      contents:[
+        {
+          content_id:'301',
+          name:contact.name,
+          email:contact.email,
+          message:contact.message,
+        }
+      ]
+    })
 
-    // tiktokPixelHandler.setTracking({
-    //   tracking: "SubmitForm",
-    //   data: {
-    //     content_id: "1232", // Example content ID
-    //     content_type: "product", // Example content type
-    //     content_name: contact.name, // Captured name
-    //     email: contact.email, // Captured email
-    //     message: contact.message, // Captured message
-    //   },
-    // });
-    // if (typeof window !== 'undefined' && window.ttq) {
-    //   window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', contact);
-    // }
-    
-    // if(typeof window !== 'undefined' && window.ttq){
-    //   console.log('jello')
-    //   window.ttq('ViewContent',{
-    //     content_id:'12B12',
-    //     content_type: "product",
-    //     content_name:'Abhinav',
-    //     price:'123'
-    //   })
-    // }
   };
 
   return (
