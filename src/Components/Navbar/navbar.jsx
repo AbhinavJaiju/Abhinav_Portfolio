@@ -10,13 +10,14 @@ const Navbar = () => {
   const handleClick = (item)=>{
     setToggle(true);
     console.log(item)
-    if(item === 'skills'){
-      window.ttq.track('ViewContent','View', {
-        content_id: {item},
-        content_type: 'product',
-        content_name: 'Product Detail',
-        quantity: 1
-     });
+    if(typeof window !== 'undefined' && window.ttq){
+      console.log('jello')
+      window.ttq('ViewContent',{
+        content_id:'12B12',
+        content_type: "product",
+        content_name:'Abhinav',
+        price:'123'
+      })
     }
   }
   return (

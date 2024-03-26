@@ -74,15 +74,15 @@ const Footer = () => {
     //   window.ttq.instance('CNUJRQRC77U07IJKR950').track('SubmitForm', contact);
     // }
     
-    if(typeof window !== 'undefined' && window.ttq){
-      console.log('jello')
-      window.ttq('ViewContent',{
-        content_id:'12B12',
-        content_type: "product",
-        content_name:'Abhinav',
-        price:'123'
-      })
-    }
+    // if(typeof window !== 'undefined' && window.ttq){
+    //   console.log('jello')
+    //   window.ttq('ViewContent',{
+    //     content_id:'12B12',
+    //     content_type: "product",
+    //     content_name:'Abhinav',
+    //     price:'123'
+    //   })
+    // }
   };
 
   return (
